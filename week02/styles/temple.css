@@ -1,0 +1,30 @@
+body {
+    font-family: arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem
+}
+
+main {
+    width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 10px;
+    text-align: center;
+}
+
+img {
+    width: 100;
+    height: auto;
+    box-shadow: 0 0 30px 20px 30px #333;
+}
+
+footer {}
