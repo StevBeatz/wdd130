@@ -1,56 +1,90 @@
 /* rafting.css */
 
+/* ===== CSS Variables ===== */
 :root {
-    --primary-color: #055a05;
-    --secondary-color: #f4a261;
-    --accent1-color: #264653;
-    --accent2-color: #e9c46a;
-    --heading-font: "Times New Roman", "George", serif;
+    --primary-color: #055a05;      /* forest green */
+    --secondary-color: #f4a261;    /* warm sand */
+    --accent1-color: #264653;      /* dark slate blue */
+    --accent2-color: #e9c46a;      /* light golden yellow */
+
+    /* Text color */
+    --text-color: #264653;
+
+    /* Fonts */
+    --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: "Arial", "Helvetica", sans-serif;
- 
 }
 
-* {
+/* ===== Universal reset ===== */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ===== Base ===== */
 body {
     font-family: var(--body-font);
     color: var(--text-color);
+    background-color: #fdfefe;
 }
 
+/* ===== Page width limit ===== */
 header, main, footer {
     width: 840px;
     margin: 0 auto;
 }
 
+/* ===== Headings ===== */
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
+/* ===== Consistent spacing ===== */
 nav, p, section, article {
     margin: 16px;
     padding: 8px;
 }
 
+/* ===== Header ===== */
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);           /* uses --accent2-color */
+}
+
+header nav a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    padding: 8px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);           /* uses --accent2-color */
+}
+
+/* ===== Social media links ===== */
 .socialmedia a {
     text-decoration: none;
 }
 
+/* ===== Hero with overlays ===== */
 .hero {
     position: relative;
 }
 
 .hero img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
 }
 
-h1 {
+/* Overlay h1 — scoped to hero */
+.hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
@@ -61,7 +95,21 @@ h1 {
     color: #fff;
 }
 
+/* Overlay article — this is what was missing */
+.hero article {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-left: 6px solid var(--secondary-color);   /* uses --secondary-color */
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 .hero article img {
     float: right;
     width: 125px;
+    margin-left: 12px;
+    border-radius: 4px;
 }
