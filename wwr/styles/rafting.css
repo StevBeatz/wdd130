@@ -6,11 +6,7 @@
     --secondary-color: #f4a261;    /* warm sand */
     --accent1-color: #264653;      /* dark slate blue */
     --accent2-color: #e9c46a;      /* light golden yellow */
-
-    /* Text color */
     --text-color: #264653;
-
-    /* Fonts */
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: "Arial", "Helvetica", sans-serif;
 }
@@ -43,38 +39,60 @@ h1, h2 {
     color: var(--primary-color);
 }
 
-/* ===== Consistent spacing ===== */
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
+/* ============================================
+   HEADER — CSS Grid: logo | nav
+   ============================================ */
+header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 12px;
+    gap: 16px;
 }
 
-/* ===== Header ===== */
-header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);           /* uses --accent2-color */
+header img {
+    width: 120px;
+    height: auto;
+    display: block;
+    background-color: #ffffff;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+/* ============================================
+   NAV — CSS Flex: horizontal row
+   ============================================ */
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
 }
 
 header nav a {
+    display: block;
     color: var(--accent2-color);
     text-decoration: none;
-    padding: 8px;
+    font-weight: bold;
+    padding: 10px 16px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--accent2-color);
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
 
-/* ===== Footer ===== */
-footer {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);           /* uses --accent2-color */
+header nav a:hover {
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
 }
 
-/* ===== Social media links ===== */
-.socialmedia a {
-    text-decoration: none;
-}
-
-/* ===== Hero with overlays ===== */
+/* ============================================
+   HERO with overlays
+   ============================================ */
 .hero {
     position: relative;
+    margin-bottom: 24px;
 }
 
 .hero img {
@@ -83,33 +101,147 @@ footer {
     height: auto;
 }
 
-/* Overlay h1 — scoped to hero */
 .hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.85;
     background-color: var(--accent1-color);
     color: #fff;
 }
 
-/* Overlay article — this is what was missing */
 .hero article {
     position: absolute;
     bottom: 24px;
     left: 24px;
     right: 24px;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-left: 6px solid var(--secondary-color);   /* uses --secondary-color */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 6px solid var(--secondary-color);
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    padding: 16px;
 }
 
 .hero article img {
     float: right;
     width: 125px;
+    height: auto;
     margin-left: 12px;
     border-radius: 4px;
+}
+
+/* ============================================
+   HISTORY — grid: text | image | text
+   ============================================ */
+.history {
+    margin: 24px 0;
+    padding: 16px;
+    background-color: #eef3f5;
+    border-radius: 6px;
+}
+
+.history h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 220px 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.history-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+.history-grid p {
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================================
+   ADVENTURES — flex row of 5 figures
+   ============================================ */
+.adventures {
+    margin: 24px 0;
+    padding: 16px;
+    background-color: #f6f9fa;
+    border-radius: 6px;
+}
+
+.adventures h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.adventure-gallery figure {
+    flex: 1 1 0;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    border: 2px solid var(--secondary-color);
+}
+
+.adventure-gallery figcaption {
+    font-family: var(--heading-font);
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    margin-top: 6px;
+}
+
+/* ============================================
+   FOOTER — flex: paragraph left, social right
+   ============================================ */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 16px;
+    margin-top: 24px;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    display: block;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    border-radius: 4px;
+    background-color: var(--accent2-color);
+    padding: 4px;
 }

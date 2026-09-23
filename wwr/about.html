@@ -11,7 +11,7 @@
 
 <body>
   <header>
-    <img src="images/z-wwr-blue.jpg" alt="White Water Rafting Co. logo featuring a raft on rushing rapids" width="150" height="100">
+    <img src="images/z-wwr-blue.jpg" alt="White Water Rafting Co. logo featuring a raft on rushing rapids">
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -21,26 +21,51 @@
   </header>
 
   <main>
-    <!-- HERO: image + h1 + article (article must be INSIDE the hero div) -->
+    <!-- HERO: image + h1 + article overlay -->
     <div class="hero">
-      <img src="images/rafting20_600.jpg" alt="Rafting team navigating white water rapids" class="hero-img">
+      <img src="images/rafting20_600.jpg" alt="Rafting team navigating white water rapids">
       <h1>White Water Rafting Co.</h1>
-
       <article>
-        <img src="images/happy-working-client.jpg" alt="Smiling guest after a rafting trip" width="400" height="300">
+        <img src="images/happy_working_client.jpg" alt="Smiling guest after a rafting trip">
         <p>Our purpose is to provide exhilarating and safe white water rafting adventures that connect people with nature and create lasting memories. We believe in teamwork, environmental stewardship, and the thrill of the river.</p>
       </article>
     </div>
 
-    <!-- SECTION 1: History -->
-    <section>
+    <!-- HISTORY: two-column grid layout -->
+    <section class="history">
       <h2>History</h2>
-      <p>Founded in 1998 by a group of river guides, White Water Rafting Co. started with just two rafts and a passion for the outdoors. Over the decades, we have grown into a premier rafting company, guiding thousands of adventurers down some of the most scenic and challenging rivers in the region. Our commitment to safety and fun has never wavered.</p>
+      <div class="history-grid">
+        <p>Founded in 1998 by a group of river guides, White Water Rafting Co. started with just two rafts and a passion for the outdoors. Our commitment to safety and fun has never wavered.</p>
+        <img src="images/history-rafting.jpg" alt="Historic photo of early rafting expeditions">
+        <p>Over the decades, we have grown into a premier rafting company, guiding thousands of adventurers down some of the most scenic and challenging rivers in the region.</p>
+      </div>
     </section>
 
-    <!-- SECTION 2: Adventure Awaits You! -->
-    <section>
+    <!-- ADVENTURE AWAITS YOU: five figures in a flex row -->
+    <section class="adventures">
       <h2>Adventure Awaits You!</h2>
+      <div class="adventure-gallery">
+        <figure>
+          <img src="images/pexels-dawinara-23-696982837-32651303 (1).jpg" alt="Dawinara">
+          <figcaption>Dawinara</figcaption>
+        </figure>
+        <figure>
+          <img src="images/pexels-ejawantah-bentala-119583087-37097436 (1).jpg" alt="Bentala">
+          <figcaption>Bentala</figcaption>
+        </figure>
+        <figure>
+          <img src="images/pexels-hilmiisilak-11183386 (1).jpg" alt="Hilmiisilak">
+          <figcaption>Hilmiisilak</figcaption>
+        </figure>
+        <figure>
+          <img src="images/rafting20_600.jpg" alt="Full Day Adventure">
+          <figcaption>Full Day Adventure</figcaption>
+        </figure>
+        <figure>
+          <img src="images/rafting41_102.jpg" alt="Overnight Rapids Adventure">
+          <figcaption>Overnight Rapids</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
@@ -48,13 +73,13 @@
     <p>&copy; 2026 White Water Rafting Co. | Otoo-Yirenkyi Stephen</p>
     <nav class="socialmedia">
       <a href="https://www.facebook.com" target="_blank" rel="noopener">
-        <img src="images/facebook.svg" alt="Facebook icon" width="32" height="32">
+        <img src="images/facebook.svg" alt="Facebook icon">
       </a>
       <a href="https://www.linkedin.com" target="_blank" rel="noopener">
-        <img src="images/linkedin.svg" alt="LinkedIn icon" width="32" height="32">
+        <img src="images/linkedin.svg" alt="LinkedIn icon">
       </a>
       <a href="https://www.instagram.com" target="_blank" rel="noopener">
-        <img src="images/instagram.svg" alt="Instagram icon" width="32" height="32">
+        <img src="images/instagram.svg" alt="Instagram icon">
       </a>
     </nav>
   </footer>
