@@ -2,10 +2,14 @@
 
 /* ===== CSS Variables ===== */
 :root {
-    --primary-color: #055a05;      /* forest green */
-    --secondary-color: #f4a261;    /* warm sand */
-    --accent1-color: #264653;      /* dark slate blue */
-    --accent2-color: #e9c46a;      /* light golden yellow */
+    --primary-color: #055a05;
+    /* forest green */
+    --secondary-color: #f4a261;
+    /* warm sand */
+    --accent1-color: #264653;
+    /* dark slate blue */
+    --accent2-color: #e9c46a;
+    /* light golden yellow */
     --text-color: #264653;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: "Arial", "Helvetica", sans-serif;
@@ -28,13 +32,16 @@ body {
 }
 
 /* ===== Page width limit ===== */
-header, main, footer {
+header,
+main,
+footer {
     width: 840px;
     margin: 0 auto;
 }
 
 /* ===== Headings ===== */
-h1, h2 {
+h1,
+h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
@@ -244,4 +251,183 @@ footer p {
     border-radius: 4px;
     background-color: var(--accent2-color);
     padding: 4px;
+}
+
+/* ============================================
+   CONTACT PAGE — Contact Us (contact.html)
+   ============================================ */
+
+/* ---- Main grid: company info + map on left, form on right ---- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 24px;
+}
+
+/* ---- Company info + map ---- */
+.company-info {
+    text-align: center;
+}
+
+.company-info h1 {
+    margin-bottom: 12px;
+}
+
+.company-info p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.company-info a {
+    color: var(--accent1-color);
+    text-decoration: none;
+}
+
+.company-info a:hover {
+    text-decoration: underline;
+}
+
+.company-info iframe {
+    width: 100%;
+    height: 250px;
+    /* Reduced from 300px */
+    border: none;
+    border-radius: 6px;
+    display: block;
+}
+
+/* ---- Contact form ---- */
+.contact-form h2 {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-row label {
+    font-weight: bold;
+    color: var(--accent1-color);
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.form-row textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+fieldset.form-row {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+fieldset.form-row legend {
+    font-weight: bold;
+    color: var(--accent1-color);
+    padding: 0 4px;
+}
+
+fieldset.form-row label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.checkbox-row label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+.contact-form button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    border: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    align-self: flex-start;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: var(--accent1-color);
+}
+
+/* ---- Employee profiles ---- */
+.employees {
+    margin: 24px 0;
+    padding: 16px;
+    background-color: #eef3f5;
+    border-radius: 6px;
+}
+
+.employees h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.employee-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.employee-grid figure {
+    flex: 1 1 150px;
+    /* Reduced from 200px */
+    text-align: center;
+    margin: 0;
+}
+
+.employee-grid img {
+    width: 100%;
+    max-width: 140px;
+    /* Reduced from 200px */
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-color);
+    display: block;
+    margin: 0 auto 8px;
+}
+
+.employee-grid figcaption {
+    font-family: var(--heading-font);
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    line-height: 1.4;
+}
+
+/* ---- Responsive: stack contact grid on small screens ---- */
+@media (max-width: 700px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
