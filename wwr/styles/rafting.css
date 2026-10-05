@@ -84,7 +84,6 @@ header nav a {
     font-weight: bold;
     padding: 10px 16px;
     background-color: var(--accent1-color);
-    /* ✅ Solid background — was rgba(255,255,255,0.12) */
     border: 1px solid var(--accent2-color);
     border-radius: 4px;
     transition: background-color 0.2s ease;
@@ -125,10 +124,12 @@ header nav a:hover {
     bottom: 24px;
     left: 24px;
     right: 24px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #ffffffe6;
+    /* ✅ Was rgba(255,255,255,0.9) */
     border-left: 6px solid var(--secondary-color);
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px #0000004d;
+    /* ✅ Was rgba(0,0,0,0.3) */
     padding: 16px;
 }
 
