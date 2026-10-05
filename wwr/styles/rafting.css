@@ -79,7 +79,8 @@ header nav {
 
 header nav a {
     display: block;
-    color: var(--accent2-color);
+    color: #ffffff;
+    /* ✅ Fixed: was var(--accent2-color) — contrast violation */
     text-decoration: none;
     font-weight: bold;
     padding: 10px 16px;
@@ -292,7 +293,6 @@ footer p {
 .company-info iframe {
     width: 100%;
     height: 250px;
-    /* Reduced from 300px */
     border: none;
     border-radius: 6px;
     display: block;
@@ -402,7 +402,6 @@ fieldset.form-row label {
 
 .employee-grid figure {
     flex: 1 1 150px;
-    /* Reduced from 200px */
     text-align: center;
     margin: 0;
 }
@@ -410,7 +409,6 @@ fieldset.form-row label {
 .employee-grid img {
     width: 100%;
     max-width: 140px;
-    /* Reduced from 200px */
     height: auto;
     border-radius: 50%;
     border: 3px solid var(--secondary-color);

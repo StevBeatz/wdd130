@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | White Water Rafting Co.</title>
     <meta name="description"
-      content="Contact White Water Rafting Co. — call, email, or send us a message about reservations, general questions, or website suggestions.">
+      content="Contact White Water Rafting Co. — call, email, or send a message about reservations, questions, or website suggestions.">
     <meta name="author" content="Otoo-Yirenkyi Stephen">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -24,24 +24,21 @@
     </header>
 
     <main>
-        <!-- ===== COMPANY INFORMATION ===== -->
-        <section class="contact-info">
-            <h1>White Water Rafting Company</h1>
-            <p>
-                123 Main River Street<br>
-                Kolob, California<br>
-                <a href="tel:+19999999999">+1 999 999 9999</a><br>
-                <a href="mailto:info@whitewater.com">info@whitewater.com</a>
-            </p>
-        </section>
-
-        <!-- ===== MAP + FORM ===== -->
+        <!-- COMPANY INFO + MAP + FORM: side-by-side grid -->
         <div class="contact-grid">
-            <section class="map">
+            <section class="company-info">
+                <h1>White Water Rafting Company</h1>
+                <p>123 Main River Street<br>
+                    Kolob, California<br>
+                    <a href="tel:+1999999999">+1 999 999 9999</a><br>
+                    <a href="mailto:info@whitewater.com">info@whitewater.com</a>
+                </p>
+
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.844125805624!2d-113.07240608482646!3d37.25114897985017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80cae1b1c1b1b1b1%3A0x1b1b1b1b1b1b1b1b!2sZion%20National%20Park!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                  allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                  title="Map showing the location of White Water Rafting Company"></iframe>
+                  width="400" height="300" allowfullscreen loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade" title="Map showing our location">
+                </iframe>
             </section>
 
             <section class="contact-form">
@@ -62,19 +59,19 @@
 
                     <fieldset class="form-row">
                         <legend>Message Purpose</legend>
-
-                        <label>
-                            <input type="radio" name="purpose" value="general" checked>
+                        <label for="purpose-general">
+                            <input type="radio" id="purpose-general" name="purpose" value="general"
+                              checked>
                             General Inquiry
                         </label>
-
-                        <label>
-                            <input type="radio" name="purpose" value="reservation">
+                        <label for="purpose-reservation">
+                            <input type="radio" id="purpose-reservation" name="purpose"
+                              value="reservation">
                             Reservation Question
                         </label>
-
-                        <label>
-                            <input type="radio" name="purpose" value="suggestion">
+                        <label for="purpose-suggestion">
+                            <input type="radio" id="purpose-suggestion" name="purpose"
+                              value="suggestion">
                             Website Suggestion
                         </label>
                     </fieldset>
@@ -86,8 +83,8 @@
                     </div>
 
                     <div class="form-row checkbox-row">
-                        <label>
-                            <input type="checkbox" name="newsletter" value="yes">
+                        <label for="newsletter">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
                             Please subscribe me to the monthly newsletter
                         </label>
                     </div>
@@ -97,26 +94,21 @@
             </section>
         </div>
 
-        <!-- ===== EMPLOYEE PROFILES ===== -->
+        <!-- EMPLOYEE PROFILES -->
         <section class="employees">
             <h2>We Are Here to Serve You</h2>
-
             <div class="employee-grid">
                 <figure>
-                    <img src="images/boat 2.jpg"
-                      alt="Emma Carter, Lead River Guide, smiling beside a raft">
+                    <img src="images/boat_2.jpg" alt="Portrait of Emma Carter, Lead River Guide">
                     <figcaption>Emma Carter — Lead River Guide</figcaption>
                 </figure>
-
                 <figure>
-                    <img src="images/boat.jpg"
-                      alt="Daniel Reyes, Reservations Manager, at the river launch">
+                    <img src="images/boat.jpg" alt="Portrait of Daniel Reyes, Reservations Manager">
                     <figcaption>Daniel Reyes — Reservations Manager</figcaption>
                 </figure>
-
                 <figure>
                     <img src="images/boat_happy.jpg"
-                      alt="Ava Mitchell, Safety Coordinator, reviewing gear on the riverbank">
+                      alt="Portrait of Ava Mitchell, Safety Coordinator">
                     <figcaption>Ava Mitchell — Safety Coordinator</figcaption>
                 </figure>
             </div>
@@ -125,7 +117,6 @@
 
     <footer>
         <p>&copy; 2026 White Water Rafting Co. | Otoo-Yirenkyi Stephen</p>
-
         <nav class="socialmedia">
             <a href="https://www.facebook.com" target="_blank" rel="noopener">
                 <img src="images/facebook.svg" alt="Facebook icon">
