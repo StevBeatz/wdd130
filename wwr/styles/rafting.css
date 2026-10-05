@@ -80,11 +80,11 @@ header nav {
 header nav a {
     display: block;
     color: #ffffff;
-    /* ✅ Fixed: was var(--accent2-color) — contrast violation */
     text-decoration: none;
     font-weight: bold;
     padding: 10px 16px;
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: var(--accent1-color);
+    /* ✅ Solid background — was rgba(255,255,255,0.12) */
     border: 1px solid var(--accent2-color);
     border-radius: 4px;
     transition: background-color 0.2s ease;
@@ -117,7 +117,7 @@ header nav a:hover {
     text-align: center;
     opacity: 0.85;
     background-color: var(--accent1-color);
-    color: #fff;
+    color: #ffffff;
 }
 
 .hero article {
@@ -325,7 +325,7 @@ footer p {
 .form-row input[type="email"],
 .form-row textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 4px;
     font-family: var(--body-font);
     font-size: 1rem;
@@ -337,7 +337,7 @@ footer p {
 }
 
 fieldset.form-row {
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 4px;
     padding: 12px;
 }
